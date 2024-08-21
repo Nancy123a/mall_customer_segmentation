@@ -1,8 +1,6 @@
 # mall_customer_segmentation
 This project utilizes clustering algorithms such as K-Means, DBSCAN, and Affinity Propagation to identify customer segments in a mall based on factors like annual income, age, and spending score.
 
-Here’s a brief overview of each of the clustering algorithms mentioned:
-
 ### 1. **K-Means Clustering**
 - **Overview**: K-Means is a popular partition-based clustering algorithm. It partitions the data into a predefined number of clusters (k), with each data point assigned to the cluster with the nearest mean (centroid).
 - **How It Works**: The algorithm iteratively updates the centroids of clusters by minimizing the sum of squared distances between data points and their respective cluster centroids.
@@ -21,4 +19,4 @@ Here’s a brief overview of each of the clustering algorithms mentioned:
 - **Strengths**: Does not require the number of clusters to be specified in advance and can handle complex cluster structures.
 - **Limitations**: Computationally intensive and may be sensitive to input parameters, such as the preference value which influences the number of clusters.
 
-Each of these algorithms has unique strengths and is suitable for different types of data and clustering scenarios.
+The analysis using various clustering algorithms—K-Means, DBSCAN, and Affinity Propagation—reveals differing effectiveness in identifying customer segments. K-Means and Affinity Propagation both successfully identified reasonable clusters, with 5 or 6 clusters emerging as optimal choices based on the elbow method and silhouette score. DBSCAN, however, struggled to produce meaningful clusters, likely due to its density-based approach, which failed to recognize less dense groups as clusters. Affinity Propagation, despite its higher computational cost, proved advantageous by automatically determining an optimal number of clusters without being sensitive to initialization, resulting in even-sized clusters similar to those from K-Means.
